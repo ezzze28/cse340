@@ -9,42 +9,17 @@
   </p>
 
   <div class="categories-grid">
-    <div class="category-card">
-      <div class="category-icon">🌱</div>
-      <h3>Environmental</h3>
-      <p>
-        Support community gardens, cleanups, tree plantings, and local
-        sustainability actions.
-      </p>
-    </div>
-
-    <div class="category-card">
-      <div class="category-icon">📚</div>
-      <h3>Educational</h3>
-      <p>
-        Empower youth and adult learners through mentoring, reading programs,
-        and tech training.
-      </p>
-    </div>
-
-    <div class="category-card">
-      <div class="category-icon">🌱</div>
-      <h3>Community Service</h3>
-      <p>
-        Help package, sort, or deliver food with local food pantries and
-        community kitchens.
-      </p>
-    </div>
-
-    <div class="category-card">
-      <div class="category-icon">❤️</div>
-      <h3>Health and Wellness</h3>
-      <p>
-        Assist local clinics, support blood drives, and promote wellness
-        workshops for all.
-      </p>
-    </div>
-  </div>
+    <% categories.forEach(category => { %>
+        <div class="category-card">
+            <div class="category-icon"><%= category.icon %></div>
+            <h3><%= category.name %></h3>
+            <p>
+                <%= category.description %>
+            </p>
+        </div>
+    <% }) %>
+</div>
+ 
 </main>
 
 <%- include('partials/footer') %>
